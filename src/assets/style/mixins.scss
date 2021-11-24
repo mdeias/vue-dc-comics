@@ -16,6 +16,9 @@
     } @else if $type == 'between'{
         align-items: center;
         justify-content: space-between;
+    }@else if $type == 'around'{
+        align-items: center;
+        justify-content: space-around;
     }
 
 }

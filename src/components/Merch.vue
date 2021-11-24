@@ -1,6 +1,27 @@
 <template>
   <section> 
-      <div class="contenitore">ciao</div>
+      <div class="contenitore">
+          <div>
+              <img src="../assets/img/buy-comics-digital-comics.png" alt="">
+              <p>DIGITAL COMICS</p>
+          </div>
+          <div>
+              <img src="../assets/img/buy-comics-merchandise.png" alt="">
+              <p>DC MERCHANDISE</p>
+          </div>
+          <div>
+              <img src="../assets/img/buy-comics-shop-locator.png" alt="">
+              <p>SUBSCRIPTION</p>
+          </div>
+          <div>
+              <img src="../assets/img/buy-comics-subscriptions.png" alt="">
+              <p>COMICS SHOP LOCATION</p>
+          </div>
+          <div>
+              <img src="../assets/img/buy-dc-power-visa.svg" alt="">
+              <p>DC POWER VISA</p>
+          </div>
+      </div>
   </section>
 </template>
 
@@ -13,7 +34,24 @@ export default {
 <style lang="scss">
 @import './src/assets/style/mixins.scss';
 section{
+    @include center();
     height: 150px;
     background-color: #0081FA;
+    .contenitore{
+        @include center(around);
+        div{
+            @include center();
+            width: 15%;
+            img{
+                width: 25%;
+                margin-right: 10px;
+            }
+            p{
+                margin-top: 15px;
+                color: white;
+                font-size: 10px;
+            }
+        }
+    }
 }
 </style>
