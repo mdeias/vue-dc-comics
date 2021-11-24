@@ -1,6 +1,8 @@
 <template>
   <main>
-      <h1>Main</h1>
+      <div class="contenitore">
+          <h2> Content goes here </h2>
+      </div>
   </main>
 </template>
 
@@ -10,6 +12,14 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import './src/assets/style/mixins.scss';
+main{
+
+    @include center();
+    height: 110px;
+    background-color: #1C1C1C;
+    color: white;
+}
 
 </style>

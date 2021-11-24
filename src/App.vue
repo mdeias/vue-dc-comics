@@ -29,4 +29,8 @@ export default {
 
 <style lang="scss">
 
+@import "./src/assets/style/generals.scss";
+@import './src/assets/style/mixins.scss';
+@import './src/assets/style/utilities.scss';
+
 </style>

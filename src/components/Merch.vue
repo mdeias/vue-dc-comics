@@ -1,6 +1,6 @@
 <template>
   <section> 
-      <h1>Merch</h1>
+      <div class="contenitore">ciao</div>
   </section>
 </template>
 
@@ -10,6 +10,10 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+@import './src/assets/style/mixins.scss';
+section{
+    height: 150px;
+    background-color: #0081FA;
+}
 </style>
