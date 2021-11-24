@@ -20,6 +20,7 @@ main{
     height: 110px;
     background-color: #1C1C1C;
     color: white;
+
 }
 
 </style>
