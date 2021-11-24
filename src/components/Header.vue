@@ -9,16 +9,9 @@
           <div class="nav-bar">
               <nav>
                   <ul>
-                      <li><a href="#">CHARACTERS</a></li>
-                      <li><a href="#">COMICS</a></li>
-                      <li><a href="#">MOVIE</a></li>
-                      <li><a href="#">TV</a></li>
-                      <li><a href="#">GAMES</a></li>
-                      <li><a href="#">COLLECTIBLES</a></li>
-                      <li><a href="#">VIDEOS</a></li>
-                      <li><a href="#">FANS</a></li>
-                      <li><a href="#">NEWS</a></li>
-                      <li><a href="#">SHOP</a></li>
+                      <li v-for="(link, index) in links" :key="index">
+                          <a :class="{active: link.attivo}" href="#">{{link.text}}</a>
+                          </li>
                   </ul>
               </nav>
           </div>
@@ -28,7 +21,53 @@
 
 <script>
 export default {
-    name: 'Header'
+    name: 'Header',
+    data(){
+        return{
+            links: [
+                {
+                    text: 'CHARACTERS',
+                    attivo: false
+                },
+                {
+                    text: 'COMICS',
+                    attivo: true
+                },
+                {
+                    text: 'MOVIE',
+                    attivo: false
+                },
+                {
+                    text: 'TV',
+                    attivo: false
+                },
+                {
+                    text: 'GAMES',
+                    attivo: false
+                },
+                {
+                    text: 'COLLECTIBLES',
+                    attivo: false
+                },
+                {
+                    text: 'VIDEOS',
+                    attivo: false
+                },
+                {
+                    text: 'FANS',
+                    attivo: false
+                },
+                {
+                    text: 'NEWS',
+                    attivo: false
+                },
+                {
+                    text: 'SHOP',
+                    attivo: false
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -51,11 +90,14 @@ header{
                     display: inline-block;
                     margin-left: 10px;
                     color: black;
-                    font-size: 12px;
+                    font-size: 11px;
                     a{
                         color: black; 
-                        &:hover{
-                            color: blue;
+                        &:hover,
+                        &.active{
+                            color: #0081FA;
+                            padding-bottom: 38px;
+                            border-bottom: 4px solid #0081FA;
                         }
                     
                     }
