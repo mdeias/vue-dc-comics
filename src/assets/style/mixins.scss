@@ -7,10 +7,10 @@
     } @else if $type == 'both'{
       align-items: center;
       justify-content: center;
-    } @else if $type == 'left'{
+    } @else if $type == 'sinistra'{
         align-items: center;
         justify-content: flex-start;
-    } @else if $type == 'right'{
+    } @else if $type == 'destra'{
         align-items: center;
         justify-content: flex-end;
     } @else if $type == 'between'{

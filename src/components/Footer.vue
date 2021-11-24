@@ -1,7 +1,48 @@
 <template>
   <footer>
       <div class="top">
-          <div class="contenitore">ciao</div>
+          <div class="contenitore">
+              <div class="dclist">
+                  <ul>
+                      <li><h6>DC COMICS</h6></li>
+                      <li><a href="#">Characters</a></li>
+                      <li><a href="#">Comics</a></li>
+                      <li><a href="#">Movies</a></li>
+                      <li><a href="#">TV</a></li>
+                      <li><a href="#">Games</a></li>
+                      <li><a href="#">Videos</a></li>
+                      <li><a href="#">News</a></li>
+                      <li class="shop"><h6>SHOP</h6></li>
+                      <li><a href="#">Lorem</a></li>
+                      <li><a href="#">Lorem</a></li>
+                  </ul>
+                  <ul>
+                      <li><h6>DC</h6></li>
+                      <li><a href="#">Terms Of Use</a></li>
+                      <li><a href="#">Privacy policy</a></li>
+                      <li><a href="#">Ad Choices</a></li>
+                      <li><a href="#">Advertising</a></li>
+                      <li><a href="#">Jobs</a></li>
+                      <li><a href="#">Subscriptions</a></li>
+                      <li><a href="#">Talent Workshops</a></li>
+                      <li><a href="#">CPSC Certificates</a></li>
+                      <li><a href="#">Ratings</a></li>
+                      <li><a href="#">Shop Help</a></li>
+                      <li><a href="#">Contact Us</a></li>
+                  </ul>
+                  <ul>
+                      <li><h6>SITES</h6></li>
+                      <li><a href="#">DC</a></li>
+                      <li><a href="#">MAD Magazine</a></li>
+                      <li><a href="#">DC Kids</a></li>
+                      <li><a href="#">DC Universe</a></li>
+                      <li><a href="#">Dc Power Visa</a></li>
+                  </ul>
+              </div>
+              <div class="logo-footer">
+                  <img src="../assets/img/dc-logo-bg.png" alt="dc-logo">
+              </div>
+          </div>
       </div>
       <div class="bottom">
           <div class="contenitore">
@@ -35,7 +76,44 @@ footer{
     height: 455px;
     .top{
         height: 70%;
-        background-color: green;
+        background-image: url("../assets/img/footer-bg.jpg");
+        .contenitore{
+            @include center(between);
+            height: 100%;
+            overflow: hidden;
+            .dclist{
+                @include center(sinistra);
+                align-items: flex-start;
+                padding-top: 30px;
+                width: 50%;
+                height: 100%;
+                ul{
+                    padding: 0;
+                    color: white;
+                    margin-right: 30px;
+                    li{
+                        line-height: 14px;
+                        a{
+                        color: #6C756E;
+                        font-size: 10px;
+                        }
+                        h6{
+                            margin-bottom: 10px;
+                        }
+                    }
+                    .shop{
+                        margin-top: 20px;
+                    } 
+                }
+            }
+            .logo-footer{
+                @include center(destra);
+                width: 50%;
+                img{
+                    width: 90%;
+                }
+            }
+        }
     }
     .bottom{
         height: 30%;
