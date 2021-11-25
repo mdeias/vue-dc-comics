@@ -127,10 +127,7 @@ footer{
                    display:inline-block;
                    margin-left: 15px;
                    color: #0088FF;
-                   font-size: 25px;
-                   img{
-                       margin-bottom: 5px;
-                   }
+                   font-size: 25px;  
                 }  
             }
             .call-to{
