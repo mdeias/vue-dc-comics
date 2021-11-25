@@ -1,5 +1,8 @@
 <template>
   <main>
+      <div class="jumbotrone">
+          <img src="../assets/img/jumbotron.jpg" alt="">
+      </div>
       <div class="contenitore">
           <h2> Content goes here </h2>
       </div>
@@ -16,11 +19,15 @@ export default {
 @import './src/assets/style/mixins.scss';
 main{
 
-    @include center();
-    height: 110px;
+    
+    height: 500px;
     background-color: #1C1C1C;
     color: white;
-
+    .jumbotrone{
+        height: 300px;
+        overflow: hidden;
+    }
+    
 }
 
 </style>
