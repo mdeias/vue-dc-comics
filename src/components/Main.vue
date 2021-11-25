@@ -4,14 +4,21 @@
           <img src="../assets/img/jumbotron.jpg" alt="">
       </div>
       <div class="contenitore">
-          <h2> Content goes here </h2>
+          <h4 class="jumbo-btn"> CURRENT SERIES </h4>
+          <Card/>
       </div>
   </main>
 </template>
 
 <script>
+
+import Card from '../components/Card.vue';
+
 export default {
-    name: 'Main'
+    name: 'Main',
+    components: {
+        Card
+    }
 }
 </script>
 
@@ -27,7 +34,10 @@ main{
         height: 300px;
         overflow: hidden;
     }
-    
+    .contenitore{
+        position: relative;
+        padding: 50px 0px;
+    }
 }
 
 </style>
