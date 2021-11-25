@@ -10,6 +10,7 @@
             :key="index"
             :card="card"
           />
+          <h6 class="jumbo-btn load">LOAD MORE</h6>
       </div>
   </main>
 </template>
@@ -50,7 +51,12 @@ main{
         justify-content: space-around;
         flex-wrap: wrap;
         position: relative;
-        padding: 50px 0px;
+        padding: 50px 0px 100px 0px;
+        .load{
+            left:45%;
+            top: 470px;
+            padding: 10px 30px;
+        }
     }
 }
 

@@ -18,25 +18,11 @@
                   </ul>
                   <ul>
                       <li><h6>DC</h6></li>
-                      <li><a href="#">Terms Of Use</a></li>
-                      <li><a href="#">Privacy policy</a></li>
-                      <li><a href="#">Ad Choices</a></li>
-                      <li><a href="#">Advertising</a></li>
-                      <li><a href="#">Jobs</a></li>
-                      <li><a href="#">Subscriptions</a></li>
-                      <li><a href="#">Talent Workshops</a></li>
-                      <li><a href="#">CPSC Certificates</a></li>
-                      <li><a href="#">Ratings</a></li>
-                      <li><a href="#">Shop Help</a></li>
-                      <li><a href="#">Contact Us</a></li>
+                      <li v-for="(link, index) in links" :key="index + 'links'"><a href="#">{{link}}</a></li>
                   </ul>
                   <ul>
                       <li><h6>SITES</h6></li>
-                      <li><a href="#">DC</a></li>
-                      <li><a href="#">MAD Magazine</a></li>
-                      <li><a href="#">DC Kids</a></li>
-                      <li><a href="#">DC Universe</a></li>
-                      <li><a href="#">Dc Power Visa</a></li>
+                      <li v-for="(site, index) in sites" :key="index + 'sites'"><a href="#">{{site}}</a></li>
                   </ul>
               </div>
               <div class="logo-footer">
@@ -50,7 +36,7 @@
               <button> <a href="#">SIGN-UP NOW!</a> </button>
               </div>
               <div class="social">
-                  <ul>
+                  <ul class="social-ul">
                       <li>FOLLOW US</li>
                       <li> <a href="#"><img src="../assets/img/footer-facebook.png" alt=""></a> </li>
                       <li> <a href="#"><img src="../assets/img/footer-twitter.png" alt=""></a> </li>
@@ -66,7 +52,35 @@
 
 <script>
 export default {
-    name: 'Footer'
+    name: 'Footer',
+    data(){
+        return{
+            links: [
+                'Terms Of Use',
+                'Privacy policy',
+                'Ad Choices',
+                'Advertising',
+                'Jobs',
+                'Subscriptions',
+                'Talent Workshops',
+                'CPSC Certificates',
+                'Ratings',
+                'Shop Help',
+                'Contact Us'
+            ],
+            sites:[
+                'DC',
+                'MAD Magazine',
+                'DC Kids',
+                'DC Universe',
+                'Dc Power Visa'
+            ]
+            
+
+    }
+        
+    }
+
 }
 </script>
 
@@ -121,13 +135,15 @@ footer{
         @include center();
         .contenitore{
             @include center(between);
-            .social{
-                @include center();
-                ul li{
-                   display:inline-block;
-                   margin-left: 15px;
-                   color: #0088FF;
-                   font-size: 25px;  
+            .social{                
+                .social-ul{
+                    @include center();
+                    li{
+                        display:inline-block;
+                        margin-left: 15px;
+                        color: #0088FF;
+                        font-size: 25px;  
+                    }  
                 }  
             }
             .call-to{

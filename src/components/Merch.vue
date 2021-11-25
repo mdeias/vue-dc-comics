@@ -38,16 +38,16 @@ section{
     height: 150px;
     background-color: #0081FA;
     .contenitore{
-        @include center(around);
+        @include center(between);
         div{
             @include center();
-            width: 15%;
+            width: 18%;
             img{
-                width: 25%;
+                width: 20%;
                 margin-right: 10px;
             }
             p{
-                margin-top: 15px;
+                
                 color: white;
                 font-size: 10px;
             }
